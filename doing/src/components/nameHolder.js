@@ -10,11 +10,10 @@ function NameHolder(Props) {
         <div className='container'>
             <div className='text'>
                 <h1>About the food culture in Tenkasi</h1>
-                <br/>
-                <p>Order food and beverages online from restaurants near & around you. We deliver food from your neighborhood local joints, your favorite cafes, luxurious & elite restaurants in your area. Exciting bit? We place no minimum order restrictions! Order in as little (or as much) as you'd like. We'll Swiggy it to you!</p>
-
+                <br />
+                <p>Order food and beverages online from restaurants near & around you. We deliver food from your neighborhood local joints, your favorite cafes, luxurious & elite restaurants in your area. Exciting bit? We place no minimum order restrictions! Order in as little (or as much) as you'd like. We'll deliver it to you!</p>
             </div>
-            <br/>
+            <br />
             <div><h1>Popular restaurants in and around Tenkasi</h1></div>
             {/* <div className='wrapper'>
                 <Name name={list[0].name}
@@ -43,16 +42,16 @@ function NameHolder(Props) {
                     image={list[5].image}></Name>
             </div> */}
             <div className='wrapper'>
-            {
-                list.map((details)=>{
-                    return(
-                        <Name key={Math.random()} image = {details.image} name={details.name} food={details.food} rating={details.rating}></Name>
-                    )
-                })
-            }
+                {
+                    list.map((details) => {
+                        return (
+                            <Name key={Math.random()} image={details.image} name={details.name} food={details.food} rating={details.rating}></Name>
+                        )
+                    })
+                }
             </div>
         </div>
-        
+
     )
 }
 

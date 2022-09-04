@@ -10,6 +10,9 @@
 header{
   background-color: rgb(151, 216, 216);
 }
+.section{
+  min-height: 100vh;
+}
 
 .header-wrapper{
   display: flex;

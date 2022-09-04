@@ -53,17 +53,14 @@ function NewForm(props) {
 
 
     return (
-        <div className='form-container'>
-        <div className='form'>
             <form onSubmit={submitting}>
-                <input type="text" placeholder='Location near tenkasi..' value={newOrder.location} onChange={eventHandler1} required/>
+                <input type="text" placeholder='Location nearby...' value={newOrder.location} onChange={eventHandler1} required/>
                 <input type="text" placeholder='Hotel' value={newOrder.hotel} onChange={eventHandler2} required/>
                 <input type="text" placeholder='Food name' value={newOrder.food} onChange={eventHandler3} required/>
                 <input type="number" placeholder='Quantity' value={newOrder.qty} onChange={eventHandler4} required/>
-                <button type='submit' >Add</button>
+                <button type='submit' className='order' >Add Order</button>
             </form>
-        </div>
-        </div>
+
     )
 }
 

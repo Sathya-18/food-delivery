@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+.footer{
+    background-color: rgb(89, 142, 167);
+    height: 400px;
+    margin-top: 50px;
+}
+.container1{
+    width: 90%;
+    margin: auto;
+    padding: 30px 0px;
+}
+.container1 .doing{
+    color: rgb(194, 192, 192);
+    
+}
+.container1 .doing span{
+    color: orangered;
+}
+.footerWrap{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.box{
+    margin: 20px 0px;
+    line-height: 30px;
+}
+.box h2{
+    text-transform: uppercase;
+    font-size: large;
+    margin-bottom: 10px;
+}
+.box p{
+    text-transform: capitalize;
+}
+.container1 hr{
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+.endtext{
+    color: rgb(194, 192, 192);
+}

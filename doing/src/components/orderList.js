@@ -1,6 +1,8 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 
 import FoodItems from "./item";
+
+import './orderList.css'
 
 // function OrderList(props) {
 
@@ -19,14 +21,14 @@ class OrderList extends Component{
     
     render(){
         return(
-            <Fragment>
+            <div className='orderlist'>
             {
             
             this.props.orders.map((order) => {
                 return <FoodItems key={Math.random()} location={order.location} hotel={order.hotel} food={order.food} qty={order.qty}></FoodItems>
             })
         }
-        </Fragment>
+        </div>
         )
     }
 }

@@ -10,7 +10,7 @@ import img5 from './assets/5.jpg'
 import img6 from './assets/6.jpg'
 import MyOrder from './components/myOrder';
 import Login from './components/login/login';
-
+import Footer from './components/footer/footer'
 
 
 function App() {
@@ -103,10 +103,11 @@ function App() {
           <div className='container'>
             <h1>Great restaurants in Tenkasi, delivering to you</h1>
             <p>Set exact location to find the right restaurants near you.</p>
-            <input type='text' id='txt' />
+            <input type='text' id='txt' placeholder='Location...'/>
             <input type='button' value='Find Food' id='btn' />
           </div>
         </div>
+        <br></br>
         <div className='container'>
         {/* <MyOrder/> */}
         {isLoggedin ? <MyOrder logout={loginHandler}/> : <Login isLoggedin={loginHandler}/>}
@@ -114,6 +115,7 @@ function App() {
         <NameHolder nameList={hotels}></NameHolder>
         
       </section>
+      <Footer/>
     </div>
 
   )

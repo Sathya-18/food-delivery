@@ -21,24 +21,11 @@ function MyOrder(props) {
 
     return (
         <div className="body">
-            <button onClick={logout}>Log out</button>
+            <button onClick={logout} className='logout'>Log out</button>
             <NewForm add={addNewOrder} />
             <div className="myorder">
                 <div>
-                    <p>My Orders</p>
-                    <br />
-                    <hr />
-                    <br />
-                    <div className="wrap">
-                        <table>
-                            <tr>
-                                <td>Location</td>
-                                <td>Hotel</td>
-                                <td>Food</td>
-                                <td>Quantity</td>
-                            </tr>
-                        </table>
-                    </div>
+                    <h1>My Orders</h1>
                     <OrderList orders={orders}></OrderList>
                 </div>
             </div>

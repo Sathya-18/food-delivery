@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import './item.css'
+import image from '../assets/1.jpg'
 
 function FoodItems(props){
 
@@ -11,17 +12,22 @@ function FoodItems(props){
     return(
         
         <div className='foodItem'>
-            {/* <div>
-                <img>image</img>
-            </div> */}
-            <table>
+            <div className='img'>
+                <img src={image}></img>
+            </div>
+            <h3>{hotel}</h3>
+            <p>{location}</p>
+            <span>{food}</span>
+            <span> - </span>
+            <span>{qty}</span>
+            {/* <table>
                 <tr>
                     <td>{location}</td>
                     <td>{hotel}</td>
                     <td>{food}</td>
                     <td>{qty}</td>
                 </tr>
-            </table>
+            </table> */}
         </div>
     )
 }
