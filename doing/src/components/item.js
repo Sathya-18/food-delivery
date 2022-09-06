@@ -8,6 +8,7 @@ function FoodItems(props){
     const hotel = useState(props.hotel);
     const food = useState(props.food);
     const qty = useState(props.qty);
+    
 
     return(
         
@@ -20,14 +21,7 @@ function FoodItems(props){
             <span>{food}</span>
             <span> - </span>
             <span>{qty}</span>
-            {/* <table>
-                <tr>
-                    <td>{location}</td>
-                    <td>{hotel}</td>
-                    <td>{food}</td>
-                    <td>{qty}</td>
-                </tr>
-            </table> */}
+            
         </div>
     )
 }

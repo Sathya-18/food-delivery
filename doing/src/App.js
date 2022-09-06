@@ -11,6 +11,7 @@ import img6 from './assets/6.jpg'
 import MyOrder from './components/myOrder';
 import Login from './components/login/login';
 import Footer from './components/footer/footer'
+import logo from './assets/logo.png'
 
 
 function App() {
@@ -63,10 +64,14 @@ function App() {
   // ]
 
 
-  const [isLoggedin, setLoggedIn] = useState(false);
+  const [isLoggedin, setLoggedIn] = useState('false');
+
+ 
 
   const loginHandler = (islogin) => {
+    localStorage.setItem('login', islogin)
     setLoggedIn(islogin);
+    
   }
 
   const [hotels, setHotels] = useState([]);
@@ -89,7 +94,7 @@ function App() {
       <header>
         <div className='container'>
           <div className='header-wrapper'>
-            <p className='doing'>Doing<span>.</span></p>
+            <img src={logo}></img>
             <nav>
               <a href='#' id='link'>Help</a>
               <a href='#' id='link'>Sign In</a>
@@ -110,7 +115,7 @@ function App() {
         <br></br>
         <div className='container'>
         {/* <MyOrder/> */}
-        {isLoggedin ? <MyOrder logout={loginHandler}/> : <Login isLoggedin={loginHandler}/>}
+        {isLoggedin==="true" ? <MyOrder logout={loginHandler}/> : <Login isLoggedin={loginHandler}/>}
         </div>
         <NameHolder nameList={hotels}></NameHolder>
         
@@ -120,5 +125,6 @@ function App() {
 
   )
 }
+
 
 export default App;

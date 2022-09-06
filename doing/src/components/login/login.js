@@ -8,12 +8,11 @@ function Login(props) {
     
         const login = (e) => {
             e.preventDefault();
-            localStorage.setItem('login', true)
-            props.isLoggedin(true);
+            localStorage.setItem('login', 'true')
+            props.isLoggedin('true');
         }
 
         useEffect(() => {
-            console.log('updated')
     
             if ((email.includes('@') && password.length > 4)) {
                 setValid(true);
@@ -26,11 +25,11 @@ function Login(props) {
         }, []);
     
     
-        const emailHandler = (e) => {
-            setEmail(e.target.value)
+        const emailHandler = (int) => {
+            setEmail(int.target.value)
         }
-        const passwordHandler = (e) => {
-            setPassword(e.target.value)
+        const passwordHandler = (int) => {
+            setPassword(int.target.value)
         }
     
     
@@ -39,7 +38,7 @@ function Login(props) {
             <form onSubmit={login} className="fo">
                 <input type="email" placeholder="Enter email" onChange={emailHandler} value={email} /><br></br>
                 <input type="password" placeholder="Enter password" onChange={passwordHandler} value={password} /><br></br>
-                {isValid ? <button type="submit" className='submit' >Submit</button> : <button type="submit" className='submit' disabled>Submit</button>}
+                {isValid ? <button type="submit" className='submit1' >Submit</button> : <button type="submit" className='submit2' disabled>Submit</button>}
     
             </form>
     

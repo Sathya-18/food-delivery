@@ -3,10 +3,13 @@
 }
 .container-name{
     width: 300px;
-    height: 370px;
+    height: 420px;
     border-radius: 10px;
     padding: 15px 0px 10px 10px;
     margin: 20px 5px;
+}
+.container-name .box{
+    line-height: 20px;
 }
 .image{
     width: 280px;
@@ -22,3 +25,17 @@
 .container-name:hover{
     box-shadow: 10px 10px 10px 15px rgba(25, 167, 167, 0.3);
 }
+.liked{
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+
+.disliked{
+    font-size: 30px;
+    color: teal;
+    margin-top: 10px;
+    cursor: pointer;
+}
+

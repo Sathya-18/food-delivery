@@ -36,11 +36,9 @@ span{
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;  
 }
-/* .banner{
-  background-color: teal;
-} */
+
 .find-food{
-  background-color: teal;
+  background-color: rgb(89, 142, 167);
   height: 250px;
   display: flex;
   align-items: center;

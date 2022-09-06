@@ -45,7 +45,7 @@ function NameHolder(Props) {
                 {
                     list.map((details) => {
                         return (
-                            <Name key={Math.random()} image={details.image} name={details.name} food={details.food} rating={details.rating}></Name>
+                            <Name image={details.image} name={details.name} food={details.food} rating={details.rating}></Name>
                         )
                     })
                 }

@@ -1,7 +1,24 @@
-.fo .submit{
+.fo .submit2{
     height: 36px;
     width: 200px;
     margin-top: 15px;
     text-align: center;
     font-size: 16px;
+}
+.fo .submit1{
+    width: 200px;
+    height: 36px;
+    font-size: 16px;
+    background-color: rgb(89, 142, 167);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin-top: 15px;
+}
+.fo .submit1:hover{
+    filter: brightness(90%);
+}
+.fo .submit1:active{
+    filter: brightness(100%);
+    background-color: rgb(99, 185, 185);
 }

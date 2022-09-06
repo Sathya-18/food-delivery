@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;  
     /* background-color: aqua; */
+    
 }
 .myorder{
     margin: 20px 0px;
@@ -13,4 +14,16 @@
     width: 100px;
     height: 36px;
     font-size: 16px;
+    background-color: rgb(89, 142, 167);
+    border: none;
+    border-radius: 8px;
+    color: white;
+
+}
+.logout:hover{
+    filter: brightness(90%);
+}
+.logout:active{
+    background-color: rgb(99, 185, 185);
+    filter: brightness(100%);
 }

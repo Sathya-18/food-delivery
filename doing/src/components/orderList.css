@@ -1,7 +1,9 @@
 .orderlist{
-    display: flex;
+    /* display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     margin-top: 20px;   
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
