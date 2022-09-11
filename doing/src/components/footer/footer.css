@@ -35,6 +35,11 @@
 }
 .box p{
     text-transform: capitalize;
+    
+}
+.box p a{
+    text-decoration: none;
+    color: black;
 }
 .container1 hr{
     border: 1px solid black;

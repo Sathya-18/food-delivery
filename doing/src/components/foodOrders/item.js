@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import './item.css'
-import image from '../assets/1.jpg'
+import image from '../../assets/1.jpg'
 
 function FoodItems(props){
 

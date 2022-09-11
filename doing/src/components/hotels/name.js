@@ -4,13 +4,13 @@ import './name.css';
 
 function Create(Props){
 
-    const [like, setLike] = useState("liked");
+    const [like, setLike] = useState("disliked");
 
     const btnHandle = ()=>{
-        if(like=="liked"){
-            setLike("disliked")
-        }else{
+        if(like=="disliked"){
             setLike("liked")
+        }else{
+            setLike("disliked")
         }
     }
     
@@ -20,10 +20,13 @@ function Create(Props){
             <div className='image'>
                 <img src={Props.image}/>
             </div>
-            <div className='box'>
+            <div className='boxx'>
+                <div>
                 <h3>{Props.name}</h3>
                 <p>{Props.food}</p>
                 <p>{Props.rating}</p>
+                </div>
+                
                 <p onClick={btnHandle} className={like}>&#10084;</p>
             </div>
             

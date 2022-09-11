@@ -2,9 +2,9 @@ import './nameHolder.css';
 
 import Name from './name'
 
-function NameHolder(Props) {
+function NameHolder(props) {
 
-    let list = Props.nameList;
+    let list = props.nameList;
 
     return (
         <div className='container'>

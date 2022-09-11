@@ -8,31 +8,31 @@ function Footer(){
             <div className='footerWrap'>
             <div className='box'>
                 <h2>about doing</h2>
-                <p>blog</p>
-                <p>work with us</p>
-                <p>investor relations</p>
-                <p>report </p>
-                <p>contact us</p>
+                <p><a href='#'>blog</a></p>
+                <p><a href='#'>work with us</a></p>
+                <p><a href='#'>investor relations</a></p>
+                <p><a href='#'>report</a> </p>
+                <p><a href='#'>contact us</a></p>
             </div>
             <div className='box'>
                 <h2>doing verse</h2>
-                <p>doing</p>
-                <p>feeding india</p>
-                <p>hyperpure</p>
-                <p>our land</p>
+                <p><a href='#'>doing</a></p>
+                <p><a href='#'>feeding india</a></p>
+                <p><a href='#'>hyperpure</a></p>
+                <p><a href='#'>our land</a></p>
             </div>
             <div className='box'>
                 <h2>services</h2>
-                <p>partner with us</p>
-                <p>apps for you</p>
-                <p>doing for work</p>
+                <p><a href='#'>partner with us</a></p>
+                <p><a href='#'>apps for you</a></p>
+                <p><a href='#'>doing for work</a></p>
             </div>
             <div className='box'>
                 <h2>learn more</h2>
-                <p>privacy</p>
-                <p>security</p>
-                <p>terms</p>
-                <p>sitemap</p>
+                <p><a href='#'>privacy</a></p>
+                <p><a href='#'>security</a></p>
+                <p><a href='#'>terms</a></p>
+                <p><a href='#'>sitemap</a></p>
             </div>
             <div className='box'>
                 <h2>social links</h2>

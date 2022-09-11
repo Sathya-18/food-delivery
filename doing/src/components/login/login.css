@@ -22,3 +22,7 @@
     filter: brightness(100%);
     background-color: rgb(99, 185, 185);
 }
+.fo{
+    background-color: aqua;
+    border: 2px solid black;
+}

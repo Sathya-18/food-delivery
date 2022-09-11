@@ -1,0 +1,39 @@
+.section{
+    min-height: 100vh;
+  }
+  
+  
+  .find-food{
+    background-color: rgb(89, 142, 167);
+    height: 250px;
+    display: flex;
+    align-items: center;
+    /* padding-left: 120px; */
+    line-height: 45px;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  #txt{
+    height: 25px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    color: teal;
+    font-size: 16px;
+  }
+  #btn{
+    height: 28px;
+    width: 100px;
+    background-color: rgb(151, 216, 216);
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
+  #btn:hover{
+    cursor: pointer;
+    filter: brightness(95%);
+  }
+  #btn:active{
+    background-color: rgb(55, 165, 165);
+  }
