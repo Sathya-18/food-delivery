@@ -2,9 +2,22 @@ import './nameHolder.css';
 
 import Name from './name'
 
-function NameHolder(props) {
+import {useState, useEffect} from "react";
 
-    let list = props.nameList;
+function NameHolder() {
+
+    // let list = props.nameList;
+
+    const [hotels, setHotels] = useState([]);
+
+    useEffect(()=>{
+        fetch('https://63131d36a8d3f673ffc48d03.mockapi.io/hotels').then((response)=>{
+          return response.json()
+          
+        }).then((data)=>{
+          setHotels(data)
+        })
+      },[]);
 
     return (
         <div className='container'>
@@ -43,9 +56,9 @@ function NameHolder(props) {
             </div> */}
             <div className='wrapper'>
                 {
-                    list.map((details) => {
+                    hotels.map((details) => {
                         return (
-                            <Name image={details.image} name={details.name} food={details.food} rating={details.rating}></Name>
+                            <Name key={details.id} image={details.image} name={details.name} food={details.food} rating={details.rating}></Name>
                         )
                     })
                 }

@@ -23,7 +23,9 @@
     object-fit: cover;
 }
 .container-name:hover{
-    box-shadow: 10px 10px 10px 15px rgba(25, 167, 167, 0.3);
+    box-shadow: 0px 0px 10px 5px rgba(25, 167, 167, 0.3);
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 .disliked{
     display: flex;

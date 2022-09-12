@@ -4,9 +4,11 @@ import NewForm from "./form";
 
 import OrderList from "./orderList";
 
-import './myOrder.css'
+import './myOrder.css';
 
-function MyOrder(props) {
+
+
+function MyOrder() {
     const [orders, setorders] = useState([]);
 
     const addNewOrder = (order) => {
@@ -14,14 +16,9 @@ function MyOrder(props) {
         // console.log(order);
     }
 
-    const logout = () => {
-        props.logout(false)
-    }
-
 
     return (
         <div className="body">
-            <button onClick={logout} className='logout'>Log out</button>
             <NewForm add={addNewOrder} />
             <div className="myorder">
                 <div>

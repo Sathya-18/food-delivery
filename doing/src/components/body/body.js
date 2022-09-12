@@ -1,21 +1,22 @@
-import { useState, useEffect } from 'react';
+import { Fragment } from 'react';
 import './body.css';
 
-import NameHolder from '../hotels/nameHolder';
-import img1 from '../../assets/1.jpg';
-import img2 from '../../assets/2.jpg';
-import img3 from '../../assets/3.jpg';
-import img4 from '../../assets/4.jpg';
-import img5 from '../../assets/5.jpg';
-import img6 from '../../assets/6.jpg';
-import MyOrder from '../foodOrders/myOrder';
-import Login from '../login/login';
-
-
+// import NameHolder from '../hotels/nameHolder';
+// import img1 from '../../assets/1.jpg';
+// import img2 from '../../assets/2.jpg';
+// import img3 from '../../assets/3.jpg';
+// import img4 from '../../assets/4.jpg';
+// import img5 from '../../assets/5.jpg';
+// import img6 from '../../assets/6.jpg';
+// import MyOrder from '../foodOrders/myOrder';
+// import Login from '../login/login';
+// import {Routes, Route} from 'react-router-dom';
+// import logo from '../../assets/logo.png';
+// import {Outlet} from 'react-router-dom';
 
 function Body(){
 
-    const images = [img1,img2,img3,img4,img5,img6]
+    // const images = [img1,img2,img3,img4,img5,img6]
 
   // const Hotels = [
   //   {
@@ -63,32 +64,46 @@ function Body(){
   // ]
 
 
-  const [isLoggedin, setLoggedIn] = useState('false');
+  // const [isLoggedin, setLoggedIn] = useState('false');
 
  
 
-  const loginHandler = (islogin) => {
-    localStorage.setItem('login', islogin)
-    setLoggedIn(islogin);
+  // const loginHandler = (islogin) => {
+  //   localStorage.setItem('login', islogin)
+  //   setLoggedIn(islogin);
     
-  }
+  // }
 
-  const [hotels, setHotels] = useState([]);
+  // const [hotels, setHotels] = useState([]);
 
-  useEffect(()=>{
-    setLoggedIn(localStorage.getItem('login'))
-    fetch('https://63131d36a8d3f673ffc48d03.mockapi.io/hotels').then((response)=>{
-      return response.json()
+  // useEffect(()=>{
+  //   // setLoggedIn(localStorage.getItem('login'))
+  //   fetch('https://63131d36a8d3f673ffc48d03.mockapi.io/hotels').then((response)=>{
+  //     return response.json()
       
-    }).then((data)=>{
-      data.forEach((dat,i)=>{
-        dat.image = images[i%images.length]
-      })
-      setHotels(data)
-    })
-  },[]);
+  //   }).then((data)=>{
+  //     // data.forEach((dat,i)=>{
+  //     //   dat.image = images[i%images.length]
+  //     // })
+  //     setHotels(data)
+  //   })
+  // },[]);
 
+  
   return(
+    <Fragment>
+      {/* <header>
+        <div className='container'>
+          <div className='header-wrapper'>
+            <img src={logo}></img>
+            <nav>
+              <Link to="about">About</Link>
+              
+              
+            </nav>
+          </div>
+        </div>
+      </header> */}
     <section className='content'>
         <div className='find-food'>
           <div className='container'>
@@ -100,12 +115,14 @@ function Body(){
         </div>
         <br></br>
 
-        <div className='container'>
-        {isLoggedin==="true" ? <MyOrder logout={loginHandler}/> : <Login isLoggedin={loginHandler}/>}
+        <div className='container1'>
+        {/* {isLoggedin==="true" ? <MyOrder logout={loginHandler}/> : <Login isLoggedin={loginHandler}/>} */}
         </div>
-        <NameHolder nameList={hotels}></NameHolder>
+        {/* <NameHolder nameList={hotels}></NameHolder> */}
+        {/* <NameHolder></NameHolder> */}
         
       </section>
+      </Fragment>
   )
 }
 
