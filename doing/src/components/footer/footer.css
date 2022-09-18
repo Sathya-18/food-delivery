@@ -3,13 +3,15 @@
 }
 .footer{
     background-color: rgb(89, 142, 167);
-    height: 400px;
+    height: auto;
     margin-top: 50px;
+    /* border: 2px solid black; */
 }
 .container1{
     width: 90%;
     margin: auto;
     padding: 30px 0px;
+    /* border: 2px solid black; */
 }
 .container1 .doing{
     color: rgb(194, 192, 192);
@@ -45,6 +47,11 @@
     border: 1px solid black;
     margin-bottom: 20px;
 }
+.box i{
+    min-width: 25px;
+}
 .endtext{
     color: rgb(194, 192, 192);
 }
+
+

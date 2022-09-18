@@ -1,15 +1,13 @@
 import './header.css'
 import logo from '../../assets/logo.png';
-import  {Link, useNavigate} from "react-router-dom";
+import  {Link} from "react-router-dom";
 
 
 function Header(props){
 
-  const navigate = useNavigate();
 
   const logout = () => {
     props.isLoggedin("false")
-    navigate('/')
 }
 
 
@@ -17,10 +15,10 @@ function Header(props){
     <header>
         <div className='container'>
           <div className='header-wrapper'>
-            <img src={logo}></img>
+            <Link to="/"><img src={logo}></img></Link>
             <nav>
-              <Link to="about">About</Link>
-              {localStorage.getItem('login') == "true" ? <button onClick={logout}>Log out</button> :[<Link to='login' key={"loginkey"}>Login</Link>, <Link to='signup' key={"logoutkey"}>Sign up</Link>]}
+              <Link to="about"><p>About</p></Link>
+              {localStorage.getItem('login') == "true" ? <Link to='/' onClick={logout}><p>Log out</p></Link> :[<Link to='login' key={"loginkey"}><p>Login</p></Link>, <Link to='signup' key={"logoutkey"}><p>Sign up</p></Link>]}
               
             </nav>
           </div>

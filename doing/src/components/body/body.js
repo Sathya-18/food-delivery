@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import './body.css';
 
-// import NameHolder from '../hotels/nameHolder';
+import NameHolder from '../hotels/nameHolder';
 // import img1 from '../../assets/1.jpg';
 // import img2 from '../../assets/2.jpg';
 // import img3 from '../../assets/3.jpg';
@@ -13,10 +13,14 @@ import './body.css';
 // import {Routes, Route} from 'react-router-dom';
 // import logo from '../../assets/logo.png';
 // import {Outlet} from 'react-router-dom';
+import img1 from '../../assets/search.png';
+import img2 from '../../assets/burger.png';
+import img3 from '../../assets/money.png';
+import img4 from '../../assets/delivery.png';
 
-function Body(){
+function Body() {
 
-    // const images = [img1,img2,img3,img4,img5,img6]
+  // const images = [img1,img2,img3,img4,img5,img6]
 
   // const Hotels = [
   //   {
@@ -66,12 +70,12 @@ function Body(){
 
   // const [isLoggedin, setLoggedIn] = useState('false');
 
- 
+
 
   // const loginHandler = (islogin) => {
   //   localStorage.setItem('login', islogin)
   //   setLoggedIn(islogin);
-    
+
   // }
 
   // const [hotels, setHotels] = useState([]);
@@ -80,7 +84,7 @@ function Body(){
   //   // setLoggedIn(localStorage.getItem('login'))
   //   fetch('https://63131d36a8d3f673ffc48d03.mockapi.io/hotels').then((response)=>{
   //     return response.json()
-      
+
   //   }).then((data)=>{
   //     // data.forEach((dat,i)=>{
   //     //   dat.image = images[i%images.length]
@@ -89,8 +93,8 @@ function Body(){
   //   })
   // },[]);
 
-  
-  return(
+
+  return (
     <Fragment>
       {/* <header>
         <div className='container'>
@@ -104,25 +108,50 @@ function Body(){
           </div>
         </div>
       </header> */}
-    <section className='content'>
+      <section className='content'>
         <div className='find-food'>
           <div className='container'>
             <h1>Great restaurants in Tenkasi, delivering to you</h1>
             <p>Set exact location to find the right restaurants near you.</p>
-            <input type='text' id='txt' placeholder='Location...'/>
+            <input type='text' id='txt' placeholder='Location...' />
             <input type='button' value='Find Food' id='btn' />
           </div>
         </div>
-        <br></br>
+        <div className='back'></div>
+        <div className='container2'>
+          {/* {isLoggedin==="true" ? <MyOrder logout={loginHandler}/> : <Login isLoggedin={loginHandler}/>} */}
+          <div className='container3'>
+            <div className='steps'>
+              <div className='boxs'>
+                <img src={img1}></img>
+                <h1>Search</h1>
+                <p>Find all restaurants available near you</p>
+              </div>
+              <div className='boxs'>
+                <img src={img2}></img>
+                <h1>Choose</h1>
+                <p>Browse hundreds of menus to find the food you like</p>
+              </div>
+              <div className='boxs'>
+                <img src={img3}></img>
+                <h1>Pay</h1>
+                <p>It's quick, secure and easy</p>
+              </div>
+              <div className='boxs'>
+                <img src={img4}></img>
+                <h1>Delivery</h1>
+                <p>Food is prepared & delivered to your door</p>
+              </div>
 
-        <div className='container1'>
-        {/* {isLoggedin==="true" ? <MyOrder logout={loginHandler}/> : <Login isLoggedin={loginHandler}/>} */}
+            </div>
+          </div>
         </div>
+
         {/* <NameHolder nameList={hotels}></NameHolder> */}
-        {/* <NameHolder></NameHolder> */}
-        
+        <NameHolder></NameHolder>
+
       </section>
-      </Fragment>
+    </Fragment>
   )
 }
 

@@ -18,14 +18,18 @@ function MyOrder() {
 
 
     return (
+        <div className="container11">
         <div className="body">
+            <div className="order1">
             <NewForm add={addNewOrder} />
+            </div>
             <div className="myorder">
                 <div>
                     <h1>My Orders</h1>
                     <OrderList orders={orders}></OrderList>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

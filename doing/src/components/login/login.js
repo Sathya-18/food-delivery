@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './login.css'
+import './login.css';
+import styles from './login.module.css'
 
 function Login(props) {
     let navigate = useNavigate();
@@ -37,14 +38,16 @@ function Login(props) {
 
 
     return (
+        <div className={styles.container}>
+            <div className={styles.bgImage}></div>
 
-        <form onSubmit={login} className="fo">
+        <form onSubmit={login} className={styles.login}>
             <input type="email" placeholder="Enter email" onChange={emailHandler} value={email} /><br></br>
             <input type="password" placeholder="Enter password" onChange={passwordHandler} value={password} /><br></br>
-            {isValid ? <button type="submit" className='submit1' >Submit</button> : <button type="submit" className='submit2' disabled>Submit</button>}
-
+            {isValid ? <button type="submit" className={styles.submit1} >Submit</button> : <button type="submit" className={styles.submit2} disabled>Submit</button>}
+            
         </form>
-
+        </div>
     );
 }
 

@@ -26,7 +26,12 @@
     box-shadow: 0px 0px 10px 5px rgba(25, 167, 167, 0.3);
     transform: scale(1.1);
     transition: 0.2s;
+    cursor: poniter;
 }
+/* .container-name:active{
+    box-shadow: 0px 0px 10px 5px rgba(175, 57, 42, 0.9);
+    transform: scale(1.0);
+} */
 .disliked{
     display: flex;
     align-items: center;
@@ -42,6 +47,10 @@
     /* filter: drop-shadow(0px 0px 5px black); */
     margin-right: 10px;
     
+}
+.boxx h3:hover{
+    color: rgb(187, 81, 81);
+    cursor: pointer;
 }
 
 .liked{

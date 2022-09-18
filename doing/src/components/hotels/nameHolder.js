@@ -58,7 +58,7 @@ function NameHolder() {
                 {
                     hotels.map((details) => {
                         return (
-                            <Name key={details.id} image={details.image} name={details.name} food={details.food} rating={details.rating}></Name>
+                            <Name key={details.id} Id={details.id} image={details.image} name={details.name} food={details.food} rating={details.rating}></Name>
                         )
                     })
                 }

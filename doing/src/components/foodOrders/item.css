@@ -13,9 +13,10 @@ td{
 *{
     box-sizing: border-box;
 }
+
 .foodItem{
     width: 300px;
-    height: 370px;
+    height: 390px;
     border-radius: 10px;
     padding: 15px 0px 10px 10px;
     margin: 20px 50px;
@@ -34,7 +35,7 @@ td{
     object-fit: cover;
 }
 .foodItem:hover{
-    box-shadow: 10px 10px 10px 15px rgba(25, 167, 167, 0.3);
+    box-shadow: 0px 0px 10px 5px rgba(25, 167, 167, 0.3);
 }
 .foodItem span{
     color: black;

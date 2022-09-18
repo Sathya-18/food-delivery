@@ -36,11 +36,11 @@ function Footer(){
             </div>
             <div className='box'>
                 <h2>social links</h2>
-                <p>fb</p>
-                <p>in</p>
-                <p>ig</p>
-                <p>tw</p>
-                <p>yt</p>
+                <i className="fa fa-facebook"></i>
+                <i className="fa fa-instagram"></i>
+                <i className="fa fa-linkedin"></i>
+                <i className="fa fa-twitter"></i>
+                <i className="fa fa-youtube-play"></i>
             </div>
             </div>
             <hr></hr>
