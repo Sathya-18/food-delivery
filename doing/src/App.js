@@ -10,6 +10,9 @@ import {Routes, Route} from "react-router-dom";
 import MyOrder from  './components/foodOrders/myOrder';
 import Hotel from './components/hotels/hotelDetails';
 import NameHolder from './components/hotels/nameHolder';
+import Orders from './components/foodOrders/orderDetails';
+import Signup from './components/login/signup';
+import { MyContext } from './context';
 
 function App() {
   const [isLoggedin, setLoggedIn] = useState('false');
@@ -23,17 +26,20 @@ function App() {
   
   return (
     <div className='app'>
-      <Header isLoggedin={loginHandler}></Header>
+    <MyContext.Provider value={{isLoggedin, setLoggedIn, loginHandler}}>
+      <Header></Header>
       <Routes>
         <Route  index element={<Body></Body>}></Route>
         <Route path='about' element={<About/>}></Route>
-        <Route path='login' element={<Login isLoggedin={loginHandler}/>}></Route>
-        <Route path='orders' element={<MyOrder/>}></Route>
+        <Route path='login' element={<Login/>}></Route>
+        <Route path='signup' element={<Signup/>}></Route>
+        <Route path='myorder' element={<MyOrder/>}></Route>
+        <Route path='myorder/:orderid' element={<Orders/>}></Route>
         <Route path='hotels' element={<NameHolder/>}></Route>
         <Route path='hotels/:hotelId' element={<Hotel/>}></Route>
       </Routes>
       <Footer/>
-      
+      </MyContext.Provider>
     </div>
 
   )

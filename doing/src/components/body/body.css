@@ -33,22 +33,29 @@
 }
 
 #btn {
-  height: 28px;
-  width: 100px;
-  background-color: rgb(151, 216, 216);
+  height: 35px;
+  width: 130px;
+  background-color: rgb(125, 184, 211);
   outline: none;
   border: none;
   color: white;
   font-weight: bold;
+  border-radius: 10px;
+
 }
 
 #btn:hover {
   cursor: pointer;
   filter: brightness(95%);
+  letter-spacing: 3px;
+  transition: 500ms;
+  text-transform: capitalize;
+  /* color: #E65C4F; */
+  font-size: 16px;
 }
 
 #btn:active {
-  background-color: rgb(55, 165, 165);
+  background-color: #E65C4F;
   
 }
 /* .back{

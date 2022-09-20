@@ -1,5 +1,8 @@
 import { Fragment } from 'react';
 import './body.css';
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { MyContext } from '../../context';
 
 import NameHolder from '../hotels/nameHolder';
 // import img1 from '../../assets/1.jpg';
@@ -93,6 +96,16 @@ function Body() {
   //   })
   // },[]);
 
+  const navigate = useNavigate();
+  const islogin = useContext(MyContext);
+
+  const check = ()=>{
+    if(islogin.isLoggedin === 'true'){
+      navigate('/myorder')
+    }else{
+      alert('Please login to order foods')
+    }
+  }
 
   return (
     <Fragment>
@@ -112,9 +125,8 @@ function Body() {
         <div className='find-food'>
           <div className='container'>
             <h1>Great restaurants in Tenkasi, delivering to you</h1>
-            <p>Set exact location to find the right restaurants near you.</p>
-            <input type='text' id='txt' placeholder='Location...' />
-            <input type='button' value='Find Food' id='btn' />
+            <p>Order foods to enjoy the Greatest taste near you.</p>
+            <input type='button' value='Add Order' id='btn' onClick={check}/>
           </div>
         </div>
         <div className='back'></div>
@@ -123,22 +135,22 @@ function Body() {
           <div className='container3'>
             <div className='steps'>
               <div className='boxs'>
-                <img src={img1}></img>
+                <img src={img1} alt="icon"></img>
                 <h1>Search</h1>
                 <p>Find all restaurants available near you</p>
               </div>
               <div className='boxs'>
-                <img src={img2}></img>
+                <img src={img2} alt="icon"></img>
                 <h1>Choose</h1>
                 <p>Browse hundreds of menus to find the food you like</p>
               </div>
               <div className='boxs'>
-                <img src={img3}></img>
+                <img src={img3} alt="icon"></img>
                 <h1>Pay</h1>
                 <p>It's quick, secure and easy</p>
               </div>
               <div className='boxs'>
-                <img src={img4}></img>
+                <img src={img4} alt="icon"></img>
                 <h1>Delivery</h1>
                 <p>Food is prepared & delivered to your door</p>
               </div>

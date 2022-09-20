@@ -36,6 +36,7 @@ form input {
     outline: none;
     border-radius: 8px;
     border: 2px solid rgb(75, 119, 139);
+    text-transform: capitalize;
 }
 
 

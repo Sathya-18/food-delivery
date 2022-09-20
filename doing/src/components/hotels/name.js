@@ -1,45 +1,48 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './name.css';
+import { useContext } from 'react';
+import { MyContext } from '../../context';
 
-function Create(Props){
+function Create(Props) {
+    const islogin = useContext(MyContext);
 
     const [like, setLike] = useState("disliked");
 
-    const btnHandle = ()=>{
-        if(like=="disliked"){
-            if(localStorage.getItem('login') == 'true'){
+    const btnHandle = () => {
+        if (like === "disliked") {
+            if (islogin.isLoggedin === 'true') {
                 setLike("liked")
-            }else{
+            } else {
                 alert('Please Login to like')
             }
-        }else{
+        } else {
             setLike("disliked")
         }
-        
+
     }
     const navigt = useNavigate();
 
-    const view = ()=>{
-        navigt('/hotels/'+Props.Id)
+    const view = () => {
+        navigt('/hotels/' + Props.Id)
     }
-    
 
-    return(
+
+    return (
         <div className='container-name' >
             <div className='image'>
-                <img src={Props.image}/>
+                <img src={Props.image} alt='food' />
             </div>
             <div className='boxx'>
                 <div>
-                <h3 onClick={view}>{Props.name}</h3>
-                <p>{Props.food}</p>
-                <p>{Props.rating}</p>
+                    <h3 onClick={view}>{Props.name}</h3>
+                    <p>{Props.food}</p>
+                    <p>{Props.rating}</p>
                 </div>
-                
+
                 <p onClick={btnHandle} className={like}>&#10084;</p>
             </div>
-            
+
         </div>
     )
 }

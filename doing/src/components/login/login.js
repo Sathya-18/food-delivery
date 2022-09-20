@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
 import styles from './login.module.css'
+import { useContext } from 'react';
+import { MyContext } from '../../context';
 
-function Login(props) {
+function Login() {
     let navigate = useNavigate();
+    const props = useContext(MyContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isValid, setValid] = useState(false);
@@ -12,8 +15,8 @@ function Login(props) {
     const login = (e) => {
         e.preventDefault();
         localStorage.setItem('login', 'true')
-        props.isLoggedin('true');
-        navigate('/orders');
+        props.loginHandler('true');
+        navigate('/');
     }
 
     useEffect(() => {

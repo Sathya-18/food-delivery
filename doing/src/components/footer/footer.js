@@ -10,16 +10,14 @@ function Footer(){
                 <h2>about doing</h2>
                 <p><a href='#'>blog</a></p>
                 <p><a href='#'>work with us</a></p>
-                <p><a href='#'>investor relations</a></p>
                 <p><a href='#'>report</a> </p>
                 <p><a href='#'>contact us</a></p>
             </div>
             <div className='box'>
                 <h2>doing verse</h2>
                 <p><a href='#'>doing</a></p>
-                <p><a href='#'>feeding india</a></p>
+                <p><a href='#'>feeding tenkasi</a></p>
                 <p><a href='#'>hyperpure</a></p>
-                <p><a href='#'>our land</a></p>
             </div>
             <div className='box'>
                 <h2>services</h2>

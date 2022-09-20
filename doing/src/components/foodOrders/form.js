@@ -1,4 +1,4 @@
-import react, { useState } from 'react';
+import { useState } from 'react';
 import './form.css'
 // import OrderList from './orderList';
 // import MyOrder from './myOrder'
@@ -48,7 +48,6 @@ function NewForm(props) {
             qty: ''
         })
         props.add(newOrder);
-        // console.log(newOrder);
     }
 
 
