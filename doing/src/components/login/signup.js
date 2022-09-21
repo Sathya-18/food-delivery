@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
+import styles from './signup.module.css';
 
 function Signup(){
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password1, setPassword1] = useState('');
     const [password2, setPassword2] = useState('');
@@ -32,13 +33,17 @@ function Signup(){
     }
 
     return(
-        <div>
-            <form onSubmit={signup}>
+        <div className={styles.container}>
+            <div className={styles.bgImage}></div>
+            <div className={styles.form}>
+            <form onSubmit={signup} className={styles.signup}>
             <input type='email' placeholder="Enter email id" onChange={handleEmail} value={email}></input>
             <input type='password' placeholder="Type password" onChange={handlePw1} value={password1}></input>
             <input type='password' placeholder="Re-type password" onChange={handlePw2} value={password2}></input>
-            {valid ? <button type='submit'>Submit</button> : <button type='submit' disabled>Submit</button>}
+            {valid ? <button type='submit' className={styles.submit1}>Submit</button> : <button type='submit' className={styles.submit2} disabled>Submit</button>}
             </form>
+            <p>Already have an account? <span><Link to='/login'>Login</Link></span></p>
+            </div>
         </div>
     )
 }

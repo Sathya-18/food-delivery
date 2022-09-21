@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './login.css';
 import styles from './login.module.css'
 import { useContext } from 'react';
 import { MyContext } from '../../context';
 
 function Login() {
-    let navigate = useNavigate();
+    const navigate = useNavigate();
     const props = useContext(MyContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -48,8 +48,9 @@ function Login() {
             <input type="email" placeholder="Enter email" onChange={emailHandler} value={email} /><br></br>
             <input type="password" placeholder="Enter password" onChange={passwordHandler} value={password} /><br></br>
             {isValid ? <button type="submit" className={styles.submit1} >Submit</button> : <button type="submit" className={styles.submit2} disabled>Submit</button>}
-            
+            <p className={styles.text}>Don't have an account? <span><Link to='/signup'>Sign up</Link></span></p>
         </form>
+
         </div>
     );
 }

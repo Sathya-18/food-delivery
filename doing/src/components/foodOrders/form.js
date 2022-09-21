@@ -52,7 +52,7 @@ function NewForm(props) {
 
 
     return (
-            <form onSubmit={submitting}>
+            <form onSubmit={submitting} className='form'>
                 <input type="text" placeholder='Location nearby...' value={newOrder.location} onChange={eventHandler1} required/>
                 <input type="text" placeholder='Hotel' value={newOrder.hotel} onChange={eventHandler2} required/>
                 <input type="text" placeholder='Food name' value={newOrder.food} onChange={eventHandler3} required/>

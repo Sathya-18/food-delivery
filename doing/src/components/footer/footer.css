@@ -1,11 +1,13 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 .footer{
     background-color: rgb(89, 142, 167);
     height: auto;
     margin-top: 50px;
-    /* border: 2px solid black; */
+    border: 2px solid black;
 }
 .container1{
     width: 90%;
